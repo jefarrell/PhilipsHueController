@@ -7,5 +7,7 @@
 
 Steps to run:
 `git clone`
+
 `npm install`
+
 `DEBUG=hueProject:* ./bin/www`
