@@ -1,0 +1,153 @@
+body { 
+	background-color:#fff ;
+	font-family: 'Lato', sans-serif;
+	font-weight:300px;	
+	/*background-repeat: no-repeat; 
+  	background-size: 100%;*/
+  	color:#fff;
+}
+
+#bodymaster {
+	background-image: url("/images/restback.jpg");
+	background-size: 120%;
+	background-repeat: no-repeat;
+}
+
+#bodytable{ 
+	background-image: url("/images/tableback.jpg");
+	background-repeat: no-repeat; 
+  	background-size: 100%;
+}
+
+
+
+h1 {
+	font-size: 50px;
+	margin-top: 3%;
+	margin-left: 1%;
+	text-shadow:none;
+}
+
+h2 {
+	text-align: center;
+	font-size:32px;
+	margin-bottom: -10px;
+	border-bottom: 1px solid #fff;
+}
+
+
+button {
+   border:none;
+   /*background:#EB7F00;*/
+
+	background: #aa3c46;
+	background-image: -webkit-linear-gradient(left, #aa3c46, #fa8c3c);
+	background-image: -moz-linear-gradient(left, #aa3c46, #fa8c3c);
+	background-image: -ms-linear-gradient(left, #aa3c46, #fa8c3c);
+	background-image: -o-linear-gradient(left, #aa3c46, #fa8c3c);
+	background-image: linear-gradient(to right, #aa3c46, #fa8c3c);
+
+   padding: 60px 75px;
+   margin-left: 3%;
+   box-shadow: none;
+   text-shadow: none;
+   color: #fff;
+   font-size: 32px;
+   text-decoration: none;
+   width: 400px;
+   opacity: 0.8;
+   
+
+}
+
+button:hover, button:active {
+   background: #1695A3;
+   color: #fff;
+}
+
+button:focus {
+	outline:0;
+}
+
+label {
+	margin-top: 25px;
+	margin-bottom:5px;
+	margin-left:20px;
+	display:inline-block;
+	text-decoration: bold;
+	text-align:center;
+}
+
+p {
+	display:inline;
+}
+
+.submenu {
+	margin-bottom: 100px;
+}
+
+#mastersub, #customsub {
+	margin-bottom: 0px;
+	margin-left: 3%;
+	background:#1e288c;
+	width: 400px;
+   	opacity: 0.8;
+}
+
+
+/*#dine1 {
+	background: #a03c6e;
+}
+
+#dine2 {
+	background: #fabe50;
+}
+
+#dine3 {
+	background: #1e288c;
+}*/
+
+#dine1:hover, #dine2:hover, #dine3:hover {
+	background: #1695A3;
+  	color: #fff;
+}
+
+
+
+#restMaster, #restSection, #tableRead, #tableDine, #tableCustom {
+	float:left;
+	margin-right:10px;
+	width:400px;
+}
+
+
+
+#brightConst, #redConst, #greenConst, #blueConst {
+	color:#fff;
+	background-color:#1e288c;
+	/*opacity:0.8;*/
+	font-size: 20px;
+	border:0;
+}
+
+.slider-range, .brightslide-range {
+	width:300px;
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom: 50px;
+	margin-top:5px;
+	background-color:#000;
+
+}
+
+#indivBright {
+	margin-left: 30%;
+	margin-bottom: 20px;
+}
+
+#tableP {
+	margin-top:20px;
+	margin-bottom:5px;
+	display:block;
+	margin-left:30%;
+}

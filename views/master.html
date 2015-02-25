@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hue Lighting App</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+ <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="/javascripts/main.js"></script>
+</head>
+
+
+<body id="bodymaster">
+	<div id="wrapper">  
+		<h1> Restaurant Control Panel </h1>
+
+		<div id="buttonContainer">
+			<div id="restMaster" class="buttonGroup">
+				<button class="restaurant">Master Control</button>
+				<div class="submenu" id="mastersub">
+					
+					<h2> Constraints </h2>
+
+					<div class='restSliders' id='brightSlider'>
+						 <p>
+						  <label for="brightConst">Brightness range:</label>
+						  <input type="text" id="brightConst" readonly style="border:0">
+						</p> 
+						<div class="brightslide-range" id="resbrightslide"></div>
+					</div>
+
+					<div class='restSliders' id='redSlider'>
+						 <p>
+						  <label for="redConst">Red range:</label>
+						  <input type="text" id="redConst" readonly style="border:0">
+						</p> 
+						<div class="slider-range" id="resredslide"></div>
+					</div>
+
+					<div class='restSliders' id='greenSlider'>
+						 <p>
+						  <label for="greenConst">Green range:</label>
+						  <input type="text" id="greenConst" readonly style="border:0">
+						</p> 
+						<div class="slider-range" id="resgreenslide"></div>
+					</div>
+
+
+					<div class='restSliders' id='blueSlider'>
+						 <p>
+						  <label for="blueConst">Blue range:</label>
+						  <input type="text" id="blueConst" readonly style="border:0">
+						</p> 
+						<div class="slider-range" id="resblueslide"></div>
+					</br>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="restSection" class="buttonGroup">
+				<button class="restaurant">Per Section</button>
+				<div class="submenu" id="sectionsub">
+					<button class="subButtons" id="sec1" onclick = >Section 1</button>
+					<button class="subButtons" id="sec2">Section 2</button>
+					<button class="subButtons" id="sec3">Section 3</button>
+				</div>	
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
