@@ -4,9 +4,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
-// var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
-
-
 var app = express();
 
 // view engine setup
@@ -22,6 +19,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 ///////////////////////////
 //////  Hue Setup  ///////
+/////////////////////////
+
 var hue = require("node-hue-api"),
     HueApi = hue.HueApi,
     lightState = hue.lightState;
@@ -38,21 +37,27 @@ var displayStatus = function(status) {
     console.log(JSON.stringify(status, null, 2));
 };
 
-var bulbHost = "yourBridgeIP",
-    bulbUsername = "yourUsername",
+// Connect to API
+var bulbHost = "128.122.151.166",
+    bulbUsername = "A92fSZTJhWlgt3mD",
     api = new HueApi(bulbHost,bulbUsername),
     state = lightState.create();
 
-var stripHost = "yourBridgeIP"
-    stripUsername = "yourUsername"
+// Second connection to work with multiple Bridges
+var stripHost = "128.122.151.76"
+    stripUsername = "24b6cc4d1140b40725c6850938253823"
     apiStrip = new HueApi(stripHost,stripUsername),
     stripState = lightState.create();
 
+////////////////////////////
 ///////////////////////////
+
+
+
+
+////////////////////////////
+//////    Routes    ///////
 //////////////////////////
-
-
-
 app.use('/', routes);
 
 app.get('/master', function(req, res){
@@ -65,13 +70,12 @@ app.get('/table', function(req, res){
 
 app.get('/sec1', function (req, res) {
     console.log("request received");
-    res.send('Hello World!');
+    res.end();
 });
-
 
 app.get('/readingButton', function (req, res) {
     console.log("reading request received");
-    res.send('reading sent');
+    res.end();
     reading();
 });
 
@@ -84,24 +88,31 @@ app.get('/dine1', function (req, res) {
 
 app.get('/dine2', function (req, res) {
     console.log("family request received");
-    res.send('family sent');
+    res.end();
     family();
 });
 
 app.get('/dine3', function (req, res) {
     console.log("business request received");
-    res.send('business sent');
+    res.end();
     business();
 });
 
 app.get('/tableSlider/:brightness', function(req,res){
     var bright = req.params.brightness;
     console.log("slider level: " + bright);
-    res.send('slider sent!');
+    res.end();
     tableSlider(bright);
 })
 
+////////////////////////////
+///////////////////////////
 
+
+
+////////////////////////////
+/// Lighting Functions ////
+//////////////////////////
 var reading = function() {
     api.setLightState(1, state.on().transitionTime(25).hsl(70,70,100))
     .then(displayResult)
@@ -151,6 +162,10 @@ var tableSlider = function(value) {
     .then(displayResult)
     .done();
 }
+////////////////////////////
+///////////////////////////
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -162,7 +177,6 @@ app.use(function(req, res, next) {
     
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {

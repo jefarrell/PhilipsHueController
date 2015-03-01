@@ -12,7 +12,7 @@ body {
 }
 
 #bodytable{ 
-  	height:1000px;
+  	height:2000px;
   	width:960px;
   	margin-left:auto;
   	margin-right:auto;
@@ -24,8 +24,6 @@ body {
 	background-image: -o-linear-gradient(bottom, #5E5A59, #fff);
 	background-image: linear-gradient(to bottom, #5E5A59, #fff);
 }
-
-
 
 h1 {
 	font-size: 50px;
@@ -60,8 +58,6 @@ button {
 	text-decoration: none;
 	width: 400px;
 	opacity: 0.8;
-   
-
 }
 
 button:hover, button:active {
@@ -85,8 +81,16 @@ label {
 p {
 	display:inline;
 }
-.buttonGroup {
+
+#tableTitle {
+	width:70%;
 	margin-left:auto;
+	margin-right:auto;
+}
+
+#tableButtonContainer {
+	width:400px;
+	margin-left: auto;
 	margin-right:auto;
 }
 
@@ -134,16 +138,8 @@ p {
 	margin-top:10px;
 	margin-left: auto;
 	margin-right:auto;
-	/*float:left;
-	margin-right:10px;
-	width:400px;*/
+
 }
-
-#diningsub {
-	/*width:200px;*/
-}
-
-
 
 #brightConst, #redConst, #greenConst, #blueConst {
 	color:#fff;
@@ -159,7 +155,6 @@ p {
 	margin-bottom: 50px;
 	margin-top:5px;
 	background-color:#000;
-
 }
 
 #indivBright {
