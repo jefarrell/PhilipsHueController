@@ -7,11 +7,12 @@ int buttonState = 0;
 
 void setup() {
   Serial.begin(9600);
-  while (!Serial);
-  Serial.println("Starting bridge...\n");
+//  while (!Serial);
+//  Serial.println("Starting bridge...\n");
+   delay(2000);
   Bridge.begin();
   pinMode(buttonPin, INPUT);
-  delay(2000);
+ // delay(2000);
   
 }
 
@@ -28,15 +29,13 @@ void loop() {
     Serial.println("low");
     client.get("128.122.6.152:3000/dine2");
   }
-//  //client.get("128.122.6.152:3000/table");
-  //client.get("128.122.6.152:3000/dine3");
 
   
   while (client.available()) {
     char c = client.read();
-    Serial.print(c); 
+   // Serial.print(c); 
   }
-  Serial.flush();
+  //Serial.flush();
   delay(2000);
 }
 
