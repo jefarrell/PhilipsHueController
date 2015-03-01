@@ -38,13 +38,13 @@ var displayStatus = function(status) {
     console.log(JSON.stringify(status, null, 2));
 };
 
-var bulbHost = "128.122.151.166",
-    bulbUsername = "A92fSZTJhWlgt3mD",
+var bulbHost = "yourBridgeIP",
+    bulbUsername = "yourUsername",
     api = new HueApi(bulbHost,bulbUsername),
     state = lightState.create();
 
-var stripHost = "128.122.151.76"
-    stripUsername = "24b6cc4d1140b40725c6850938253823"
+var stripHost = "yourBridgeIP"
+    stripUsername = "yourUsername"
     apiStrip = new HueApi(stripHost,stripUsername),
     stripState = lightState.create();
 
@@ -77,7 +77,7 @@ app.get('/readingButton', function (req, res) {
 
 app.get('/dine1', function (req, res) {
     console.log("date request received");
-    res.send('date sent');
+    res.end();
     date();
 });
 
