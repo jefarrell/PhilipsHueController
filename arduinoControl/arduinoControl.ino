@@ -2,17 +2,17 @@ const int buttonPin = 2;
 #include <Bridge.h>
 #include <HttpClient.h>
 
-
 int buttonState = 0;
+int prevButtonState = 0;
+
 
 void setup() {
   Serial.begin(9600);
-//  while (!Serial);
-//  Serial.println("Starting bridge...\n");
-   delay(2000);
+
+  delay(10000);
   Bridge.begin();
   pinMode(buttonPin, INPUT);
- // delay(2000);
+
   
 }
 
@@ -20,23 +20,24 @@ void setup() {
 void loop() {
   
   HttpClient client;  
-  buttonState = digitalRead(buttonPin);
-
-  if (buttonState == HIGH) {
-    Serial.println("high");
-    client.get("128.122.6.152:3000/readingButton");
-  } else {
-    Serial.println("low");
-    client.get("128.122.6.152:3000/dine2");
-  }
-
+  int buttonState = digitalRead(buttonPin);
+  Serial.println(buttonState);
+  if (buttonState != prevButtonState) {
   
-  while (client.available()) {
-    char c = client.read();
-   // Serial.print(c); 
-  }
-  //Serial.flush();
-  delay(2000);
+    
+    if (buttonState == 1) {
+        client.get("104.131.40.84:3000/readingButton");
+        Serial.println("high");
+        
+    } else {
+        client.get("104.131.40.84:3000/dine2");
+        Serial.println("low");       
+     
+    }
+    
+  prevButtonState = buttonState;
+ 
+ }
 }
 
 
