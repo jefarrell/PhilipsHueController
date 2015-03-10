@@ -48,7 +48,6 @@ var stripHost = "128.122.151.76"
     stripUsername = "24b6cc4d1140b40725c6850938253823"
     apiStrip = new HueApi(stripHost,stripUsername),
     stripState = lightState.create();
-
 ////////////////////////////
 ///////////////////////////
 

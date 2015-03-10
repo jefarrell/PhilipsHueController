@@ -1,7 +1,10 @@
+// Simple wireless controller using the Arduino Yun
+// Used in conjunction with mobile interface
+// Communicates with node express app
+
 const int buttonPin = 2;
 #include <Bridge.h>
 #include <HttpClient.h>
-
 int buttonState = 0;
 int prevButtonState = 0;
 
