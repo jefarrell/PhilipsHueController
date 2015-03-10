@@ -13,7 +13,7 @@ Also features master control panel for restaurant staff
 
 Steps to run:
 
-   git clone
+    git clone
 
     npm install
 
