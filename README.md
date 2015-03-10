@@ -5,7 +5,9 @@
 ####Made for Connected Devices at NYU ITP.
 
 Simple wireless controller using the Arduino Yun
+
 Complimented by mobile interface
+
 Also features master control panel for restaurant staff
 ***
 
